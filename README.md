@@ -1,44 +1,50 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
 # Leaderboard
 
-> The Project uses APIs to show scores of a game.
+> This is a leaderboard Application that displays scores of a game from an REST API.
 
-![screenshot](./src/leaderboard.png)
-
-Additional description about the project and its features.
+![screenshot](./leaderboard.png)
 
 ## Built With
 
-- HTML5
-- CSS
-- Git Workflows
-- Webpack
-- ES6
-- VS code
+- Major languages
+  - HTML
+  - Javascript
+  - CSS
+- Technologies used
+  - npm
+  - webpack
 
-## Live Demo
+<!-- ## Live Demo (if available) -->
 
-<!-- [Live Demo Link](https://livedemo.com) -->
+<!-- [Live Demo Link](https:/) -->
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+To get a local copy up and running follow these simple steps.
 
-To get a local copy up and running follow these simple example steps.
+### Prerequisites
 
-### Clone
+- npm
+- git
 
-Clone the project from Github <https://github.com/Aduda-Boaz/leaderboard.git> to your local computer
+### Setup
+
+- open terminal or bash
+- run
+  - `git clone https://github.com/Aduda-Boaz/leaderboard.git`
 
 ### Install
 
-- Install dependencies by running $ npm Install
-- Run $ npm run build
-- Run $ npm start
+- run
+  - `cd leaderboard`
+  - `npm install`
+  - `npm run build`
+  - `npm start` to run the server
 
-## Authors
+### Deployment
+
+- run
+  - `npm run build`
 
 👤 **Aduda Boaz**
 
@@ -50,18 +56,8 @@ Clone the project from Github <https://github.com/Aduda-Boaz/leaderboard.git> to
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/Aduda-Boaz/leaderboard/issues).
 
 ## Show your support
 
-Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](lic.url) licensed.
+Give a ⭐️ if you like this project!s
