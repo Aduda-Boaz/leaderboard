@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+.title {
+  font-size: 3em;
+  padding-top: 2em;
+  padding-left: 6em;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5em;
+  height: 80vh;
+}
+
+.main-container {
+  display: flex;
+  padding: 8em;
+  gap: 8em;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  width: 15em;
+  gap: 2em;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  height: 3rem;
+}
+
+.btn {
+  font-size: 10px;
+  margin-left: auto;
+  padding: 0.2rem;
+}
+
+.scores {
+  border: rgb(51, 40, 40) solid 0.2rem;
+}
+
+.list-score {
+  padding: 4px;
+}
+
+.list-score:nth-child(odd) {
+  background-color: rgb(211, 202, 202);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  padding-top: 5px;
+}
+
+input {
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.add-btn {
+  margin-top: 10px;
+}
