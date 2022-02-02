@@ -69,3 +69,19 @@ h2 {
 .list-score:nth-child(odd) {
   background-color: rgb(216, 184, 184);
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  padding-top: 5px;
+}
+
+input {
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.add-btn {
+  margin-top: 10px;
+}
