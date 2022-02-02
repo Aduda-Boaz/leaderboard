@@ -4,9 +4,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+<title>The Scores</title>
 </head>
 <body>
-  
+  <h2 class="title">Leaderboard</h2>
+  <main class="container">
+    <div class="main-container">
+      <div class="table">
+        <div class="score">
+          <h2 class="score-title">Recent scores</h2>
+          <button type="button" class="refresh-btn btn">Refresh</button>
+        </div>
+        <ul id="scores" class="scores">
+          <li class="list-score">Boaz: 110</li>
+          <li class="list-score">Boaz: 110</li>
+          <li class="list-score">Boaz: 110</li>
+          <li class="list-score">Boaz: 110</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="score-title">Add your score</h3>
+        <form action="add-form">
+          <input type="text" name="name" placeholder="Name" />
+          <input type="text" name="score" placeholder="Scores" />
+          <button type="button" class="add-btn btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
