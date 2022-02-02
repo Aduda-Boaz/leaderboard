@@ -21,7 +21,7 @@ h2 {
 .title {
   font-size: 3em;
   padding-top: 2em;
-  padding-left: 1.5em;
+  padding-left: 6em;
 }
 
 .container {
@@ -34,6 +34,7 @@ h2 {
 
 .main-container {
   display: flex;
+  padding: 8em;
   gap: 8em;
 }
 
@@ -59,7 +60,6 @@ h2 {
 
 .scores {
   border: rgb(51, 40, 40) solid 0.2rem;
-  border-radius: 40% 26% 46% 47% 1% 1% 1% 1%;
 }
 
 .list-score {
@@ -67,7 +67,7 @@ h2 {
 }
 
 .list-score:nth-child(odd) {
-  background-color: rgb(216, 184, 184);
+  background-color: rgb(211, 202, 202);
 }
 
 form {
