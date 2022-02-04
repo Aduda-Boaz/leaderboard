@@ -14,9 +14,9 @@
   - npm
   - webpack
 
-<!-- ## Live Demo (if available) -->
+## Live Demo -->
 
-<!-- [Live Demo Link](https:/) -->
+[Live Demo Link](https://leaderboardscores.netlify.app)
 
 ## Getting Started
 

@@ -1,43 +1,38 @@
-const listScore = async (newList) => {
-  const sendScore = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Ul4d7IVkemOTTVg2fUdz/scores/', {
-    method: 'POST',
-    body: JSON.stringify({
-      user: newList.user,
-      score: newList.score,
-    }),
-    headers: {
-      'content-type': 'application/json; charset=UTF-8',
-    },
-  });
-  const json = await sendScore.json();
-  return json;
+export const createScoreListElement = (newName, newScore) => {
+  const listContainer = document.createElement('li');
+  listContainer.classList.add('.list');
+
+  const listText = document.createElement('p');
+  listText.classList.add('score');
+
+  const text = document.createTextNode(`${newName}: ${newScore}`);
+  listText.appendChild(text);
+  listContainer.appendChild(listText);
+
+  return listContainer;
 };
 
-const getScoreinfo = async () => {
-  const getScore = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Ul4d7IVkemOTTVg2fUdz/scores/');
-  const json = await getScore.json();
-  return json;
+export const appendListElement = (el) => {
+  const leaderboardResults = document.querySelector('.list');
+  leaderboardResults.appendChild(el);
 };
 
-export default class Score {
-  constructor() {
-    this.scoreItem = [];
-  }
+const deleteAllScores = () => {
+  const leaderboardResults = document.querySelector('.list');
+  for (let i = leaderboardResults.childElementCount - 1; i >= 0; i -= 1);
+  leaderboardResults.children[1].remove();
+};
 
-  addNewScoreList(newList, updateLocalStorageDOM) {
-    listScore(newList).then(() => {
-      this.scoreItem.push(newList);
-      updateLocalStorageDOM(this);
-      return this.scoreItem;
-    });
-  }
+export const leaderboardAPIResults = (resultArray) => {
+  deleteAllScores();
+  for (let i = 0; i < resultArray.length; i += 1) {
+    const scoreList = createScoreListElement(resultArray[i].user, resultArray[i].score);
 
-  removeFromList(updateLocalStorageDOM) {
-    this.scoreItem.length = 0;
-    getScoreinfo().then((json) => {
-      this.scoreItem = json.result;
-      updateLocalStorageDOM(this);
-      return this.scoreItem;
-    });
+    appendListElement(scoreList);
   }
-}
+};
+
+export const clearForms = () => {
+  document.getElementById('user').value = '';
+  document.getElementById('score').value = '';
+};
