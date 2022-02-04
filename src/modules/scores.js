@@ -3,7 +3,7 @@ export const createScoreListElement = (newName, newScore) => {
   listContainer.classList.add('.list');
 
   const listText = document.createElement('p');
-  listText.classList.add('score');
+  listText.classList.add('name');
 
   const text = document.createTextNode(`${newName}: ${newScore}`);
   listText.appendChild(text);

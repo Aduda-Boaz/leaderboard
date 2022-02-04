@@ -15,8 +15,8 @@ const setAPIScores = async (newName, newScore) => {
   await fetch(GAME_ADDRESS, {
     method: 'POST',
     body: JSON.stringify({
-      user: newName,
       score: newScore,
+      user: newName,
     }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
