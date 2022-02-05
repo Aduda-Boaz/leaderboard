@@ -22,7 +22,6 @@ const showScores = async () => {
   listItems.innerHTML = '';
   const resp = await fetch(url);
   const { result: scores } = await resp.json();
-
   scores.forEach((result) => {
     const item = document.createElement('li');
     item.innerHTML = `${result.user}: ${result.score}`;

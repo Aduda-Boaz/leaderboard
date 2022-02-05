@@ -8,6 +8,10 @@
 
 html {
   font-family: 'Montserrat', sans-serif;
+  background-image: url(https://get.wallhere.com/photo/Assassins-Creed-Revelations-Desmond-Miles-castle-wall-snow-mountains-731748.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300vh;
 }
 
 ul {
@@ -21,7 +25,7 @@ h2 {
 .title {
   font-size: 3em;
   padding-top: 2em;
-  padding-left: 6em;
+  padding-left: 5em;
   color: gold;
 }
 
@@ -29,13 +33,12 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5em;
+  padding: 5px;
   height: 100%;
 }
 
 .main-container {
   display: flex;
-  padding: 8em;
   gap: 8em;
 }
 
@@ -44,6 +47,10 @@ h2 {
   flex-direction: column;
   width: 15em;
   gap: 2em;
+}
+
+.score-title {
+  color: bisque;
 }
 
 .score {
@@ -62,6 +69,7 @@ h2 {
 .list {
   border: rgb(51, 40, 40) solid 0.2rem;
   padding: 4px;
+  color: azure;
 }
 
 form {
