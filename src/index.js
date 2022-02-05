@@ -20,8 +20,9 @@ const listItems = document.getElementsByClassName('list')[0];
 
 const showScores = async () => {
   listItems.innerHTML = '';
-  const { result: scores } = await fetch(url)
-    .then((resp) => resp.json());
+  const resp = await fetch(url);
+  const { result: scores } = await resp.json();
+
   scores.forEach((result) => {
     const item = document.createElement('li');
     item.innerHTML = `${result.user}: ${result.score}`;
