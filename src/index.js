@@ -18,7 +18,7 @@ submitBtn.addEventListener('click', async (e) => {
 
 const listItems = document.getElementsByClassName('list')[0];
 
-async function showScores() {
+const showScores = async () => {
   listItems.innerHTML = '';
   const { result: scores } = await fetch(url)
     .then((resp) => resp.json());
@@ -27,7 +27,7 @@ async function showScores() {
     item.innerHTML = `${result.user}: ${result.score}`;
     listItems.appendChild(item);
   });
-}
+};
 
 refreshBtn.addEventListener('click', showScores);
 window.onload = showScores;
