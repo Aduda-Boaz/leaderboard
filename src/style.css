@@ -22,6 +22,7 @@ h2 {
   font-size: 3em;
   padding-top: 2em;
   padding-left: 6em;
+  color: gold;
 }
 
 .container {
@@ -29,7 +30,7 @@ h2 {
   align-items: center;
   justify-content: center;
   padding: 5em;
-  height: 80vh;
+  height: 100%;
 }
 
 .main-container {
@@ -58,16 +59,9 @@ h2 {
   padding: 0.2rem;
 }
 
-.scores {
+.list {
   border: rgb(51, 40, 40) solid 0.2rem;
-}
-
-.list-score {
   padding: 4px;
-}
-
-.list-score:nth-child(odd) {
-  background-color: rgb(211, 202, 202);
 }
 
 form {
