@@ -82,3 +82,16 @@ input {
 .add-btn {
   margin-top: 10px;
 }
+
+.message,
+.error-message,
+.success-message {
+  color: #4d023c;
+  font-size: medium;
+  font-weight: 600;
+  align-self: center;
+  border: 1px solid #9e1781;
+  background-color: white;
+  padding: 3px 5px;
+  border-radius: 0.25rem;
+}

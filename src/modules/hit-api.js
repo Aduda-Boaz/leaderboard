@@ -1,27 +1,44 @@
-import { createScoreListElement } from './scores.js';
+export default class Score {
+  constructor() {
+    this.url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/DIvC379OvteODU5bAfDN/scores';
+    this.listScore = document.querySelector('.list');
+  }
 
-const GAME_CODE = 'DIvC379OvteODU5bAfDN';
-const GAME_ADDRESS = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${GAME_CODE}/scores`;
+  getAPIScores = async () => {
+    const response = await fetch(this.url);
 
-const getAPIScores = async () => {
-  const RESPONSE = await fetch(GAME_ADDRESS);
+    const resObj = await response.json();
+    this.showListElement(resObj.result);
+  };
 
-  const RESPONSE_OBJECT = await RESPONSE.json();
+  setAPIScores = async (newName, newScore) => {
+    await fetch(this.url, {
+      method: 'POST',
+      body: JSON.stringify({
+        user: newName,
+        score: newScore,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    });
+  };
 
-  createScoreListElement(RESPONSE_OBJECT.result);
-};
+  showListElement = (array) => {
+    array.sort((a, b) => b.score - a.score);
+    array.forEach((element) => {
+      const lib = document.createElement('li');
+      lib.className = ('list');
+      const par1 = document.createElement('p');
+      par1.innerText = `${element.user}`;
+      par1.className = ('user');
+      lib.appendChild(par1);
+      const par2 = document.createElement('p');
+      par1.innerText = `${element.score}`;
+      par1.className = ('score');
+      lib.appendChild(par2);
+    });
+  }
+}
 
-const setAPIScores = async (newName, newScore) => {
-  await fetch(GAME_ADDRESS, {
-    method: 'POST',
-    body: JSON.stringify({
-      score: newScore,
-      user: newName,
-    }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  });
-};
-
-export { getAPIScores, setAPIScores };
+export const score = new Score();
