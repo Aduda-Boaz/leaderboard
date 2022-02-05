@@ -29,7 +29,7 @@ h2 {
   align-items: center;
   justify-content: center;
   padding: 5em;
-  height: 80vh;
+  height: 100%;
 }
 
 .main-container {
@@ -61,10 +61,7 @@ h2 {
 .list {
   border: rgb(51, 40, 40) solid 0.2rem;
   padding: 4px;
-}
-
-.list:nth-child(odd) {
-  background-color: rgb(150, 144, 144);
+  height: 100%;
 }
 
 form {
@@ -81,17 +78,4 @@ input {
 
 .add-btn {
   margin-top: 10px;
-}
-
-.message,
-.error-message,
-.success-message {
-  color: #4d023c;
-  font-size: medium;
-  font-weight: 600;
-  align-self: center;
-  border: 1px solid #9e1781;
-  background-color: white;
-  padding: 3px 5px;
-  border-radius: 0.25rem;
 }
