@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 const nameInput = document.getElementById('user');
 const scoreInput = document.getElementById('score');
 const submitBtn = document.getElementById('add');

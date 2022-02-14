@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import './style.css';
 import apiData from './modules/hit-api.js';
 import {

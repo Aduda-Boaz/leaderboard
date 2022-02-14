@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 const apiData = async (url = '', data = {}) => {
   const response = await fetch(url, {
     method: 'POST',
